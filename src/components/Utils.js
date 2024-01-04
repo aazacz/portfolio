@@ -16,6 +16,7 @@ export const changeNavbarColor = (setColorchange) => {
   };
 };
 
+
 export const skillvalues = [
   {
     index: 1,
@@ -103,4 +104,69 @@ export const skillvalues = [
   },
 ];
 
+import webpage from "../../public/Microsoft.png"
+export const projectDetails = [
+
+
+  {
+  image:webpage,
+  title:"MedPlus Web",
+  description:'This is a Hospital Management App, Can be used for User,Doctor and Admin Management  .',
+  technology:["React Js","Vite js","MongoDb","HTML5","CSS","Javascript","JWT"],
+  git:"https://github.com/aazacz/netflix_clone",
+  deploy:" "
+  },
+  {
+  image:webpage,
+  title:"Kenvill E Commerce",
+  description:'This is a E Commerce website for shoe purchasing',
+  technology:["Javascript","MongoDb","HTML5","CSS",],
+  git:"https://github.com/aazacz/Kenvill_Ecommerce-website",
+  deploy:"kenvill.shop"
+  },
+  {
+  image:"",
+  title:"Netfllix Clone",
+  description:'This is a web page design for fortnite Game.',
+  technology:["React Js","HTML5","CSS",],
+  git:"https://github.com/aazacz/netflix_clone",
+  deploy:" "
+  },
+  {
+  image:"",
+  title:"FortNite",
+  description:'This is a web page design for fortnite Game.',
+  technology:["HTML5","CSS"],
+  git:"https://github.com/aazacz/FortNite-FrontPage",
+  deploy:" "
+  },
+  {
+  image:"",
+  title:"Loyaltextiles",
+  description:'This is a clone of a textile company website.',
+  technology:["HTML5","CSS"],
+  git:"https://github.com/aazacz/loyaltextile",
+  deploy:"https://aazacz.github.io/loyaltextile/"
+  },
+ 
+  {
+  image:"",
+  title:"Microsoft",
+  description:'This is a clone of microsoft landing page.',
+  technology:["HTML5","CSS"],
+  git:"https://github.com/aazacz/Microsoft",
+  deploy:"https://aazacz.github.io/Microsoft/"
+  },
+ 
+
+] 
+
+import { FaGithub,FaInstagram,FaLinkedin   } from "react-icons/fa";
+
+export const contacticons =[
+  {name:"Github",iconclass:FaGithub,link:"https://github.com/aazacz"},
+  {name:"Linkedin",iconclass:FaLinkedin,link:"https://www.linkedin.com/in/abhilash-abin-zachariah-219129157/"},
+  {name:"Instagram",iconclass:FaInstagram,link:"https://www.instagram.com/abin_zacz/"}
+
+]
 

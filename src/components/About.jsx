@@ -31,7 +31,7 @@ const About = () => {
 
                             I guarantee enthusiasm in work and fulfilling my projects with inexpressible efforts.
                         </p>
-                       
+                       <button className='w-auto h-auto px-6 border-2-blue text-white'>Resume</button>
 
                     </div>
                 </div>

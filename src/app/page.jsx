@@ -5,8 +5,9 @@ import Banner from '@/components/Banner';
 import About from '@/components/About';
 import Navbar from '@/components/Navbar';
 import Skills from '@/components/Skills';
-import Education from '@/components/Education';
+// import Education from '@/components/Education';
 import Projects from '@/components/Projects';
+import Contact from '@/components/Contact';
 
 export default function Home() {
 
@@ -43,7 +44,7 @@ export default function Home() {
     <About/>
     <Skills/>
     <Projects/>
-    <Education/>
+    <Contact/>
 
     </>
   )

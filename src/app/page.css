@@ -195,3 +195,47 @@ animation: cursor .6s infinite,animate 20s steps(14) infinite;
       transform: rotate(-20deg);
     }
   }
+
+  .projectcardText{
+    position: relative;
+    width: 100px;
+   
+  }
+
+  .projectcardText::after{
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 3px;
+    background-color:#fddb18;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .edcline{
+    position:relative;
+  }
+
+  .edcline::before{
+    content:"";
+    position: absolute;
+    width:500px;
+    height:4px;
+    background-color: #06b6d4;
+    top:50%;
+    transform: translateY(-50%);
+  }
+
+
+  .banner {
+    width: 200px;
+    height: 150px;
+    background-color: #3498db;
+    clip-path: polygon(0% 0%, 100% 0, 100% 75%, 82% 75%, 75% 92%, 68% 75%, 0% 75%);
+  }
+
+  .icontransition:hover{
+    background-color:#3498db ;
+    
+  }
