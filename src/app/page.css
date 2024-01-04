@@ -239,3 +239,47 @@ animation: cursor .6s infinite,animate 20s steps(14) infinite;
     background-color:#3498db ;
     
   }
+
+  .resume {
+    position: relative;
+    width: 200px;
+    height:35px;
+    z-index: 1;
+    background:linear-gradient(to right, rgb(236, 72, 153), rgb(239, 68, 68), rgb(234, 179, 8)); 
+    cursor: pointer; /* Add a cursor pointer on hover */
+  }
+  
+  .resume::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    transform-origin: bottom right ;
+    transition: transform 0.5s ease;
+    transform: scaleX(1);
+    z-index: -1;
+  
+  }
+  
+  .resume:hover {
+  color: white;
+  }
+  .resume:hover::before {
+    transform: scaleX(0);
+  }
+
+  
+
+  @keyframes gradientfill {
+    from{
+      background-color: transparent;
+      transform-origin: bottom left;
+    }
+    to{
+   
+     background-color: #06b6d4;
+    }
+  }

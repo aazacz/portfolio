@@ -6,7 +6,7 @@ import profileimage from '../../public/Photo2.jpg'
 const About = () => {
 
     return (
-        <div className='box w-full h-auto  z-50 bg-sky-100 md:p-[180px] md:pt-[100px]' >
+        <div id='About' className='box w-full h-auto  z-50 bg-sky-100 md:p-[180px] md:pt-[100px]' >
             
             <div className=' flex flex-col items-center justify-center ' >
 
@@ -31,7 +31,7 @@ const About = () => {
 
                             I guarantee enthusiasm in work and fulfilling my projects with inexpressible efforts.
                         </p>
-                       <button className='w-auto h-auto px-6 border-2-blue text-white'>Resume</button>
+                       <button className=' resume px-6   border-sky-600 border-[1px]  '>Resume</button>
 
                     </div>
                 </div>

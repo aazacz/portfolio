@@ -4,6 +4,12 @@
 @tailwind components;
 @tailwind utilities;
 
+html{
+    scroll-behavior: smooth;
+  
+    
+}
+
 .main{
     overflow-y: scroll;
 }

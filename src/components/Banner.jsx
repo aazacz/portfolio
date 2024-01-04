@@ -5,7 +5,7 @@ import '../app/page.css'
 
 const Banner = () => {
   return (
-    <main className=" md:flex min-h-screen h-auto overflow-y-hidden md:sticky md:top-[70px] items-center  md:overflow-x-hidden  text-white md:p-14 md:pb-0 -z-10">
+    <main id='Home' className=" md:flex min-h-screen h-auto overflow-y-hidden md:sticky md:top-[70px] items-center  md:overflow-x-hidden  text-white md:p-14 md:pb-0 -z-10">
 
 
       <div className='w-1/2 h-full md:flex flex-col '>
@@ -19,9 +19,7 @@ const Banner = () => {
 
           <span className=' firstText  text-[50px]'></span>
           </div>
-          <div>
-            <span>I'm working with  </span>
-          </div>
+        
         </div>
 
       </div>

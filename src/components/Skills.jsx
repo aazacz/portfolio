@@ -6,7 +6,7 @@ import { skillvalues } from "./Utils"
 
 const Skills = () => {
     return (
-        <div className=' border-t-8 border-t-cyan-500 w-full h-auto bg-MainBlue z-50 md:p-[80px] md:pt-[100px] ' >
+        <div id='Skills' className=' border-t-8 border-t-cyan-500 w-full h-auto bg-MainBlue z-50 md:p-[80px] md:pt-[100px] ' >
             <h1 className=' font-extrabold text-[60px] font-PT_sans'> <span className='text-transparent bg-clip-text bg-gradient-to-b from-sky-400 to-sky-200'> Skills</span></h1>
 
             <h3 className='text-slate-200 w-[800px] text-wrap text-[30px]'>I have extensive experience working with a variety of technologies as a developer.

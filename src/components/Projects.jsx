@@ -9,7 +9,7 @@ import { FaInternetExplorer } from "react-icons/fa";
 
 const Projects = () => {
   return (
-    <div className=' border-t-8 border-t-cyan-500 w-full h-auto bg-MainBlue z-50 md:p-[80px] md:pt-[100px] ' >
+    <div id='Projects' className=' border-t-8 border-t-cyan-500 w-full h-auto bg-MainBlue z-50 md:p-[80px] md:pt-[100px] ' >
       <h1 className=' font-extrabold text-[60px] font-PT_sans px-[100px]'> <span className=' text-transparent bg-clip-text bg-gradient-to-b from-sky-400 to-sky-200'> Projects</span></h1>
 
       <h3 className='text-slate-200  text-wrap text-[30px] px-[100px]'>Here are some of the projects I've worked on, utilizing various technology stacks..</h3>

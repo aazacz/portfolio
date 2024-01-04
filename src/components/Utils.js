@@ -1,5 +1,33 @@
 // utils.js
 
+
+export const list = [
+  {
+      li: "Home",
+      link: "#Home"
+  },
+  {
+      li: "About",
+      link: "#About"
+  },
+  {
+      li: "Skills",
+      link: "#Skills"
+  },
+  {
+      li: "Projects",
+      link: "#Projects"
+  },
+  {
+      li: "Contact",
+      link: "#Contact"
+  },]
+
+
+
+
+
+
 export const changeNavbarColor = (setColorchange) => {
   const handleScroll = () => {
     if (window.scrollY >= 10) {
@@ -103,6 +131,8 @@ export const skillvalues = [
     Description: "Designing websites and prototyping"
   },
 ];
+
+
 
 import webpage from "../../public/Microsoft.png"
 export const projectDetails = [
