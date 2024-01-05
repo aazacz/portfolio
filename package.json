@@ -3,9 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "deploy":"npm run build && rsync --exclude=.git -azP . ubuntu@51.20.182.59:/home/ubuntu/portfolio",
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
+    "start": "next start -p 3001",
     "lint": "next lint"
   },
   "dependencies": {
