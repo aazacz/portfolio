@@ -3,10 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "deploy":"npm run build && rsync --exclude=.git -azP . ubuntu@51.20.182.59:/home/ubuntu/portfolio",
+    "deploy": "npm run build && rsync --exclude=.git -azP . ubuntu@51.20.182.59:/home/ubuntu/portfolio",
     "dev": "next dev",
     "build": "next build",
-    "start": "next start -p 3001",
+    "start": "next start -p 3000",
     "lint": "next lint"
   },
   "dependencies": {
@@ -14,7 +14,8 @@
     "next": "14.0.4",
     "react": "^18",
     "react-dom": "^18",
-    "react-icons": "^4.12.0"
+    "react-icons": "^4.12.0",
+    "sharp": "^0.33.1"
   },
   "devDependencies": {
     "autoprefixer": "^10.0.1",
