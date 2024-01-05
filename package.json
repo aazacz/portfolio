@@ -6,7 +6,7 @@
     "deploy": "npm run build && rsync --exclude=.git -azP . ubuntu@51.20.182.59:/home/ubuntu/portfolio",
     "dev": "next dev",
     "build": "next build",
-    "start": "next start -p 3000",
+    "start": "next start ",
     "lint": "next lint"
   },
   "dependencies": {
