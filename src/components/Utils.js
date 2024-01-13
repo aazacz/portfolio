@@ -129,6 +129,8 @@ export const skillvalues = [
 ]
 
 import webpage from '../../public/Microsoft.png'
+import LoyalTextiles from '../../public/LoyalTextiles.png'
+
 export const projectDetails = [
   {
     image: webpage,
@@ -147,6 +149,7 @@ export const projectDetails = [
     git: 'https://github.com/aazacz/netflix_clone',
     deploy: ' ',
   },
+  
   {
     image: webpage,
     title: 'Kenvill E Commerce',
@@ -155,24 +158,27 @@ export const projectDetails = [
     git: 'https://github.com/aazacz/Kenvill_Ecommerce-website',
     deploy: 'kenvill.shop',
   },
+
   {
-    image: '',
+    image: webpage,
     title: 'Netfllix Clone',
     description: 'This is a web page design for fortnite Game.',
     technology: ['React Js', 'HTML5', 'CSS'],
     git: 'https://github.com/aazacz/netflix_clone',
     deploy: ' ',
   },
+
   {
-    image: '',
+    image: webpage,
     title: 'FortNite',
     description: 'This is a web page design for fortnite Game.',
     technology: ['HTML5', 'CSS'],
     git: 'https://github.com/aazacz/FortNite-FrontPage',
     deploy: ' ',
   },
+
   {
-    image: '',
+    image: LoyalTextiles,
     title: 'Loyaltextiles',
     description: 'This is a clone of a textile company website.',
     technology: ['HTML5', 'CSS'],
@@ -181,7 +187,7 @@ export const projectDetails = [
   },
 
   {
-    image: '',
+    image: webpage,
     title: 'Microsoft',
     description: 'This is a clone of microsoft landing page.',
     technology: ['HTML5', 'CSS'],

@@ -17,15 +17,10 @@ const Navbar = () => {
 
   return (
     <header
-      className={` w-full z-50 sticky  top-0 mx-auto justify-between  px-6    ${
-        colorChange
-          ? 'bg-MainBlue md:bg-sky-600 transition-colors duration-200'
-          : 'bg-none'
-      } 
-      md:backdrop-blur-sm md:shadow-[0px_3px_20px_2px_#4c51bf] md:flex justify-between`}
-    >
-      <div
-        className={`flex z-50  sticky  top-0 justify-between  py-2  md:w-1/2 font-Oswald text-[30px] font-medium text-white `}
+      className={` w-full z-50 fixed  top-0 mx-auto justify-between  px-6   
+       ${  colorChange ? 'bg-MainBlue md:bg-sky-600 transition-colors duration-200' : 'bg-none' } 
+       md:backdrop-blur-sm md:shadow-[0px_3px_20px_2px_#4c51bf] md:flex justify-between`} >
+      <div  className={`flex z-50     justify-between  py-2  md:w-1/2 font-Oswald text-[30px] font-medium text-white `}
       >
         <span
           className={`transition-all duration-400 hover:font-Oswald hover:text-[30px] hover:font-medium hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-bl from-gray-300 via-fuchsia-600 to-orange-600`}
