@@ -58,7 +58,7 @@ const Navbar = () => {
         >
           <ul className="    md:flex md:justify-end md:space-x-11  ">
             {list.map((value, index) => (
-              <li
+              <li onClick={()=>setOpen(!open)}
                 key={index}
                 className={` py-2 md:py-0 ${
                   open ? 'text-white ' : 'text-white'
