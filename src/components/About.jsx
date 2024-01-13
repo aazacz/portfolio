@@ -44,9 +44,10 @@ const About = () => {
                     </p>
                   
                     <div className="w-full flex justify-center md:justify-start mx-auto ">
-                    <button className=" resume px-6 w-[200px] h-[38px]  border-sky-600 border-[1px]  font-serif" >
+                    <a   target="_blank"
+                        rel="noopener noreferrer" href="https://drive.google.com/file/d/1LVl384aQqlKQsq6nuPAkQXUu4v22XtUF/view?usp=sharing" className=" resume px-6 w-[200px] h-[38px] text-center flex items-center justify-center text-xl font-Oswald border-sky-600 border-[1px]  " >
                     Resume
-                    </button>
+                    </a>
                     </div>
                 </div>
 
