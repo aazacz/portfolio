@@ -28,7 +28,7 @@ const Navbar = () => {
   return (
     <header
       className={` w-full z-50 fixed  top-0 mx-auto justify-between  px-6   
-       ${  colorChange ? 'bg-MainBlue md:bg-sky-600 transition-colors duration-200' : 'bg-none' } 
+       ${  colorChange ? 'bg-MainBlue md:bg-sky-600 ' : 'bg-none' } 
        md:backdrop-blur-sm md:shadow-[0px_3px_20px_2px_#4c51bf] md:flex justify-between`} >
       <div  className={`flex z-50     justify-between  py-2  md:w-1/2 font-Oswald text-[30px] font-medium text-white `}
       >
@@ -51,11 +51,10 @@ const Navbar = () => {
         </button>
       </div>
 
-      <div className="md:flex-row md:w-1/2 my-auto z-40">
+      <div className={`md:flex-row md:w-1/2 my-auto z-40  `}>
         <div
-          className={` w-full    absolute md:relative     md:bg-transparent ${
-            open ? '-translate-y-72 opacity-5   ' : 'opacity-100 '
-          } md:block md:translate-y-0 md:opacity-100 transition-opacity-200  transition-all duration-700 text-white text-center backdrop-blur-sm md:backdrop-blur-0 `}
+          className={` w-full    absolute  md:relative     ${ open ? '-translate-y-72 opacity-5   ' : 'opacity-100 '   } 
+          md:block md:translate-y-0 md:opacity-100 transition-opacity-200  transition-all duration-700 text-white text-center backdrop-blur-sm md:backdrop-blur-0 `}
         >
           <ul className="    md:flex md:justify-end md:space-x-11  ">
           
