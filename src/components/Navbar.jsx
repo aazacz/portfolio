@@ -52,14 +52,13 @@ const Navbar = () => {
       </div>
 
       <div className={`md:flex-row md:w-1/2 my-auto z-40  `}>
-        <div
-          className={` w-full    absolute  md:relative     ${ open ? '-translate-y-72 opacity-5   ' : 'opacity-100 '   } 
+        <div   className={` w-full    absolute  md:relative  left-0   ${ open ? '-translate-y-72 opacity-5   ' : 'opacity-100 '   } 
           md:block md:translate-y-0 md:opacity-100 transition-opacity-200  transition-all duration-700 text-white text-center backdrop-blur-sm md:backdrop-blur-0 `}
         >
           <ul className="    md:flex md:justify-end md:space-x-11  ">
           
           <li > <button className={`py-2 md:py-0 text-white text-lg `} 
-                    onClick={()=>scrollToTop()} type='button'>  HOME   </button>  </li>
+                    onClick={()=>{scrollToTop(); setOpen(!open)}} type='button'>  HOME   </button>  </li>
           
             {list.map((value, index) => (
               <li onClick={()=>setOpen(!open)}

@@ -5,7 +5,7 @@ import profileimage from "../../public/Photo2.jpg";
 
 const About = () => {
   return (
-    <div  id="About"   className="box w-full h-auto  z-50 bg-sky-100 md:p-[180px] md:pt-[100px]"    >
+    <div  id="About"   className="mt-[96px] box w-full h-auto  z-50 bg-sky-100 md:p-[180px] md:pt-[100px]"    >
    
       <div className=" flex flex-col items-center justify-center ">
 

@@ -7,7 +7,7 @@ const Banner = () => {
   return (
     <main
       id="Home" style={{zIndex:-1}}
-      className="  md:flex md:min-h-screen h-auto  sticky top-[70px] items-center  md:overflow-x-hidden  text-white md:p-14 md:pb-0 md:-z-30"
+      className="  md:flex md:min-h-screen  sticky top-[70px] items-center  md:overflow-x-hidden  text-white md:p-14 md:pb-0 md:-z-30"
     >
       <div className="  w-full pt-7 md:pt-0 md:w-1/2 h-full flex flex-col items-center md:items-start ">
         <p className="  text-[60px] md:text-[60px] font-bold text-transparent bg-clip-text bg-gradient-to-r from-teal-200 to-lime-200">
