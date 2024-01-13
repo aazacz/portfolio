@@ -1,10 +1,7 @@
 // utils.js
 
 export const list = [
-  {
-    li: 'Home',
-    link: '#Home',
-  },
+
   {
     li: 'About',
     link: '#About',
@@ -26,6 +23,7 @@ export const list = [
 export const changeNavbarColor = (setColorchange) => {
   const handleScroll = () => {
     if (window.scrollY >= 10) {
+      
       setColorchange(true)
     } else {
       setColorchange(false)
@@ -38,6 +36,8 @@ export const changeNavbarColor = (setColorchange) => {
     window.removeEventListener('scroll', handleScroll)
   }
 }
+
+
 
 export const skillvalues = [
   {

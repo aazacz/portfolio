@@ -1,20 +1,34 @@
 'use client'
-import React, { useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import '../app/page.css'
 import Image from 'next/image'
 import { contacticons } from './Utils'
 import { SiGmail } from 'react-icons/si'
 import emailjs from '@emailjs/browser'
+import {toast} from 'react-hot-toast'
 
 const Contact = () => {
   const [message, setMessage] = useState('')
+  const [details, setdetails] = useState({name:"",email:"",subject:"",message:""})
 
   const form = useRef()
 
+  const removeQueryParameters = () => {
+    const urlWithoutQuery = window.location.href.split('?')[0];
+    window.history.pushState({}, document.title, urlWithoutQuery);
+  };
+
+  useEffect(()=>{
+    removeQueryParameters()
+  },[])
+
+  
+
   const sendEmail = (e) => {
-    e.preventDefault()
-    console.log('Email sending')
-    emailjs
+    e.preventDefault();
+  
+    // Show a loading toast while sending the email
+    const promise = emailjs
       .sendForm(
         'service_wx0xbld',
         'template_t045hic',
@@ -23,16 +37,31 @@ const Contact = () => {
       )
       .then(
         (result) => {
-          console.log(result.text)
+          form.current.reset();
+          setMessage("")
+          setdetails({...details,name:"",email:"",subject:"",message:""}) 
+          removeQueryParameters()
+          
+          return result.text;
         },
         (error) => {
-          console.log(error.text)
-        },
-      )
-  }
+          console.log(error.text);
+          // Returning error.text for error toast
+          throw error.text;
+        }
+      );
+  
+    // Show toast based on the promise
+    toast.promise(promise, {
+      loading: 'Sending email...',
+      success: (value) =>  <b>{'Email sent successfully!'}</b>  ,
+      error: (error) => <b>{error || 'Could not send email.'}</b>,
+    });
+  };
 
   return (
     <>
+    
       <div  id="Contact"   className="px-7  border-t-8 border-t-cyan-500 w-full h-auto bg-MainBlue z-50 md:p-[80px] md:pt-[100px] "   >
        
        
@@ -63,6 +92,7 @@ const Contact = () => {
                 className="  md:w-[400px] h-9  bg-gray-400 bg-opacity-30 placeholder:text-gray-300 placeholder:pl-4"
                 type="text"
                 placeholder="Your Name"
+                onChange={(e)=>setdetails({...details,name:e.target.value})}
               />
 
               <input
@@ -70,6 +100,7 @@ const Contact = () => {
                 className=" md:w-[400px] h-9 bg-gray-400 bg-opacity-30 placeholder:text-gray-300 placeholder:pl-4"
                 type="email"
                 placeholder="Your Email"
+                onChange={(e)=>setdetails({...details,email:e.target.value})}
               />
 
               <input
@@ -77,6 +108,7 @@ const Contact = () => {
                 className=" md:w-[400px] h-9 bg-gray-400 bg-opacity-30 placeholder:text-gray-300 placeholder:pl-4"
                 type="text"
                 placeholder="Subject"
+                onChange={(e)=>setdetails({...details,subject:e.target.value})}
               />
 
               <textarea
@@ -84,7 +116,10 @@ const Contact = () => {
                 className="resize-none md:w-[400px] h-24 bg-gray-400 bg-opacity-30 placeholder:text-gray-300 placeholder:pl-4"
                 placeholder="Message"
                 value={message}
-                onChange={(e) => setMessage(e.target.value)}
+                onChange={(e) =>{ setMessage(e.target.value)
+                setdetails({...details, message : e.target.value })
+              }}
+               
               ></textarea>
 
               <button

@@ -1,6 +1,7 @@
 import { Inter } from 'next/font/google'
 import './globals.css'
 import Navbar from '@/components/Navbar'
+import { Toaster } from 'react-hot-toast'
 
 export const metadata = {
   title: 'Abhilash Abin Zachariah',
@@ -18,6 +19,7 @@ export default function RootLayout({ children }) {
         <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
       </head>
       <body className="main w-screen  md:overflow-x-hidden bg-MainBlue">
+         <Toaster  position="top-center"  reverseOrder={false}/>
         <Navbar />
         {children}
       </body>

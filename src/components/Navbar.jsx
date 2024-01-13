@@ -1,6 +1,6 @@
 'use client'
 import React, { useState, useEffect, useRef } from 'react'
-import { changeNavbarColor } from './Utils'
+import { changeNavbarColor,ScrollToTop } from './Utils'
 import Link from 'next/link'
 import { SiOpenlayers } from 'react-icons/si'
 import { list } from './Utils'
@@ -12,8 +12,18 @@ const Navbar = () => {
 
   useEffect(() => {
     const cleanup = changeNavbarColor(setColorChange)
-    return () => cleanup()
+    
+    return () => {cleanup()}
   }, [])
+
+  
+  const isBrowser = () => typeof window !== 'undefined';
+  function scrollToTop() {
+    console.log(isBrowser());
+    if (!isBrowser()) return;
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+      
+}
 
   return (
     <header
@@ -22,16 +32,12 @@ const Navbar = () => {
        md:backdrop-blur-sm md:shadow-[0px_3px_20px_2px_#4c51bf] md:flex justify-between`} >
       <div  className={`flex z-50     justify-between  py-2  md:w-1/2 font-Oswald text-[30px] font-medium text-white `}
       >
-        <span
-          className={`transition-all duration-400 hover:font-Oswald hover:text-[30px] hover:font-medium hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-bl from-gray-300 via-fuchsia-600 to-orange-600`}
+        <span    className={`transition-all duration-400 hover:font-Oswald hover:text-[30px] hover:font-medium hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-bl from-gray-300 via-fuchsia-600 to-orange-600`}
         >
           Abhilash Abin Zachariah
         </span>
 
-        <button
-          className={`block z-50 ${
-            open ? 'rotate-180 ' : 'rotate-0 text-cyan-500 '
-          } transition-all duration-200 md:hidden 
+        <button className={`block z-50 ${ open ? 'rotate-180 ' : 'rotate-0 text-cyan-500 '  } transition-all duration-200 md:hidden 
                               ${
                                 colorChange
                                   ? 'text-light bg-dark'
@@ -52,6 +58,10 @@ const Navbar = () => {
           } md:block md:translate-y-0 md:opacity-100 transition-opacity-200  transition-all duration-700 text-white text-center backdrop-blur-sm md:backdrop-blur-0 `}
         >
           <ul className="    md:flex md:justify-end md:space-x-11  ">
+          
+          <li > <button className={`py-2 md:py-0 text-white text-lg `} 
+                    onClick={()=>scrollToTop()} type='button'>  HOME   </button>  </li>
+          
             {list.map((value, index) => (
               <li onClick={()=>setOpen(!open)}
                 key={index}
