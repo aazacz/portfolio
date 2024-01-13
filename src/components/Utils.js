@@ -130,6 +130,7 @@ export const skillvalues = [
 
 import webpage from '../../public/Microsoft.png'
 import LoyalTextiles from '../../public/LoyalTextiles.png'
+import olx from '../../public/Olx.png'
 
 export const projectDetails = [
   {
@@ -149,7 +150,7 @@ export const projectDetails = [
     git: 'https://github.com/aazacz/netflix_clone',
     deploy: ' ',
   },
-  
+
   {
     image: webpage,
     title: 'Kenvill E Commerce',
