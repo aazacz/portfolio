@@ -142,7 +142,7 @@ Or find me on:
         
         
         
-          <div className="md:w-1/2 outline-dashed px-12 bg-gray-500 bg-opacity-10  backdrop-blur-sm pt-6 rounded-[30px]">
+          <div className="md:block hidden md:w-1/2 outline-dashed px-12 bg-gray-500 bg-opacity-10  backdrop-blur-sm pt-6 rounded-[30px]">
             <h1 className="text-white text-3xl">Send A Message</h1>
 
             <h3 className="pt-7 text-white text-lg leading-7">
